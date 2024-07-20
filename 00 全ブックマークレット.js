@@ -125,7 +125,7 @@ if (path.toString().indexOf('/user/') != -1) {
 
 {
 	// ■RSS設定ページ
-const  selObj = window.getSelection();
+let  selObj = window.getSelection();
 selObj = encodeURIComponent(selObj);
 window.open('https://syon-feed-filter.herokuapp.com/view/' + selObj, 'newWindow');
 }
@@ -134,9 +134,20 @@ window.open('https://syon-feed-filter.herokuapp.com/view/' + selObj, 'newWindow'
 
 {
 	// ■Google検索
-const  selObj = window.getSelection();
+let  selObj = window.getSelection();
 selObj = encodeURIComponent(selObj);
 window.open('https://www.google.co.jp/search?q=' + selObj, 'newWindow');
+}
+
+// -------------------------------------------------------------
+
+{
+// Oxford Learner's Dictionaries
+const selectedObj = window.getSelection();
+const selectedText = selectedObj.toString().trim();
+const encodedObj = encodeURIComponent(selectedText);
+window.open('https://www.oxfordlearnersdictionaries.com/definition/english/'
+	+ encodedObj, 'newWindow');
 }
 
 // -------------------------------------------------------------
