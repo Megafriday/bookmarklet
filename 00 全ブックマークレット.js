@@ -199,6 +199,14 @@
 // -------------------------------------------------------------
 
 {
+	// ■ DeepWikiを開く
+	const url = window.location.href;
+	window.location = url.replace('github', 'deepwiki');
+}
+
+// -------------------------------------------------------------
+
+{
 	// ■ uithubを開く
 	const url = window.location.href;
 	window.location = url.replace('github', 'uithub');
